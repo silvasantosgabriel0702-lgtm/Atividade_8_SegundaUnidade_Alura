@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOGMÓN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    header {
+        background-color: #320796;
+        color: #fbff00;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 16px;
+    }
+
+    main {
+        background-color: #ffffff;
+        color: #7c2121;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        width: 180px;
+        height: 90px;
+    }
+
+    .artigo-autor {
+        font-weight: bold;
+    }
+    .artigo-imagem-grande {
+        width: 100%;
+        height: auto;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Meu primeiro blog!</h1>
+        <p>Compartilharei aqui tudo sobre
+            oque sei de pokémon e suas
+            curiosidades!</p>
+    </header>
+    <main>
+
+    <article>
+        <img src=image_739bb50f.png alt="Ilustração em estilo logotipo
+             vetorizado de uma Pokébola clássica aberta, vista em 
+             perspectiva e isolada em um fundo branco. De dentro dela, saem 
+             circuitos tecnológicos e hologramas brilhantes em tons de 
+             azul-ciano, formando a silhueta geométrica de um Pikachu.">
+        <div>
+            <h2>Meu primeiro post</h2>
+            <p class="artigo-autor">Por: <strong>Gabriel Henrique</strong></p>
+            <p> Bem-vindo ao BLOGMÓN! Espero que você
+                goste do conteúdo que compartilharei
+                aqui sobre essas curiosidades bacanas
+                nesse tobogã tecnológico!</p>
+            <button>❤️<span>0</span></button>
+            <button>👍<span>0</span></button>
+            <button>👎<span>0</span></button>
+
+        </div>
+    </article>
+
+    <article>
+        <img class="artigo-imagem-grande" src="Pokemon-Shiny-1.avif" alt="Ilustração de pokémon shiny, com cores diferentes do original, em um fundo branco.">
+        <div>
+            <h2>Meu segundo post</h2>
+            <p class="artigo-autor">Por: <strong>Gabriel Henrique</strong></p>
+            <p> ✨ O Fenômeno Cósmico dos Pokémon Shiny! ✨
+Você sabia que no universo Pokémon existem criaturas que parecem ter saído de uma dimensão paralela? Eles são os Pokémon Shiny (ou Brilhantes), versões raríssimas que possuem cores totalmente diferentes das originais e que soltam faíscas de luz quando entram em batalha!
+
+Aqui estão 4 curiosidades surpreendentes sobre eles para você usar no seu trabalho:
+
+Raridade extrema:Nos primeiros jogos (como Pokémon Gold e Silver), a chance de encontrar um Shiny na grama era de apenas 1 em 8.192! Hoje em dia, essa chance melhorou para 1 em 4.096, mas ainda sim é preciso muita sorte.
+
+O primeiro de todos: O primeiríssimo Pokémon Shiny que a maioria dos jogadores conheceu foi o Gyarados Vermelho, no Lago da Fúria. Ele faz parte da história oficial dos jogos da segunda geração.
+Eles já foram chamados de outra forma: O termo "Shiny" foi criado pelos próprios fãs por causa do brilho que eles soltam. A Pokémon Company gostou tanto do apelido que oficializou o nome anos depois, na quinta geração de jogos.
+
+Mudanças drásticas (ou não): Enquanto alguns Pokémon mudam completamente de cor — como o Charizard, que fica preto e monstruoso —, outros quase não mudam nada. O Pikachu Shiny, por exemplo, tem apenas um tom de amarelo um pouco mais escuro!
+
+Essas variantes coloridas mostram que, até mesmo no mundo virtual, a diversidade e a raridade tornam as coisas ainda mais especiais.
+</p>
+            <button>❤️<span>0</span></button>
+            <button>👍<span>0</span></button>
+            <button>👎<span>0</span></button>
+        </div>
+    </article>
+        <main>
+        </main>
+</body>
+<script>
+const botoes = document.querySelectorAll("button");
+
+botoes.forEach(function (botao) {
+    let curtiu = false;
+    botao.addEventListener("click", botaoClicado);
+    
+    function botaoClicado() {
+        console.log("fui clicado");
+        let texto = botao.querySelector("span");
+        
+        if (curtiu === false) {
+            texto.textContent++;
+            curtiu = true;
+        } else {
+            texto.textContent--;
+            curtiu = false;
+        }
+    }
+});
+
+</script>
+
+</html>
